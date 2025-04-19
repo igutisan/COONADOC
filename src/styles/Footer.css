@@ -20,9 +20,15 @@
     font-weight: bold;
   }
   
-  .footer-logo img {
-    width: 40px;
-    height: auto;
+  .footer-logo #logo1{
+    width: 60px;
+    height: 40px;
+  }
+
+  .footer-logo #logo2{
+    width: 100px;
+    height: 40px;
+    margin-left: 20px;
   }
   
   .footer-socials {
@@ -33,14 +39,13 @@
   }
   
   .footer-socials a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 500;
   }
   
   .footer-socials a:hover {
     color: #f18f07;
-    text-decoration: underline;
   }
   
   .footer-bottom {

@@ -14,8 +14,6 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-logo">
           <img src="/images/image.png" alt="logoCoonadoc" />
-          <div className="logo-text">
-        </div>
       </div>
 
       <button className="menu-toggle" onClick={toggleMenu}>

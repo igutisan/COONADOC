@@ -1,0 +1,47 @@
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  
+  .beneficio-card {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .beneficio-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Colores personalizados para cada tarjeta */
+  .financiero {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+  }
+  
+  .bienestar {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+  }
+  
+  .recreacion {
+    background: linear-gradient(135deg, #56ccf2, #2f80ed);
+  }
+  
+  .educacion {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  }
+  
+  .beneficio-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .beneficio-card p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  

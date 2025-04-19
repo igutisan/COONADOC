@@ -6,9 +6,8 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <img src="/images/image.png" alt="logoCoonadoc" />
-          <img src="/images/supersolidaria.png" alt="logoSupersolidaria" />
-          <span>COONADOC</span>
+          <img id="logo1" src="/images/image.png" alt="logoCoonadoc" />
+          <img id="logo2" src="/images/superSolidaria.png" alt="logoSupersolidaria" />
         </div>
 
         <div className="footer-socials">

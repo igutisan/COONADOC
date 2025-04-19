@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: white;
+    background-color: #1a1a1a;
     border-bottom: 1px solid #e5e5e5;
     position: sticky;
     top: 0;
@@ -11,20 +11,15 @@
   }
   
   .navbar-logo {
+    margin-left: 30px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
   }
   
   .navbar-logo img {
-    width: 70px;
+    width: 80px;
     height: auto;
-  }
-  
-  .logo-text {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #1a1a1a;
   }
   
   .menu-toggle {
@@ -39,15 +34,15 @@
     list-style: none;
     display: flex;
     gap: 2rem;
-    margin: 0;
+    margin-right: 30px;
     padding: 0;
   }
   
   .navbar-links li a {
-    color: #1a1a1a;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   
   .navbar-links li a:hover {
