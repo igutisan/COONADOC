@@ -1,4 +1,6 @@
 .home-container {
+    font-family: "PT Serif", serif;
+    font-weight: 600;
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -6,6 +8,19 @@
     background-color: #ffffff; /* fondo suave */
     color: #171717;
   }
+
+  /*Carousel de imagenes*/
+  .carousel {
+    max-width: 100%;
+    max-height: 500px; /* Puedes ajustar este valor */
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .carousel-img {
+    object-fit: cover;
+    height: 500px; /* El mismo alto que el contenedor */
+  }  
   
   /* Secciones con estilo de "tarjeta" */
   .home-container section {
@@ -14,13 +29,18 @@
     padding: 2rem;
     border-radius: 1rem;
   }
+
+  h1,h2{
+    font-family: "DM Serif Text", serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
   
   /* Títulos */
   .home-container h1 {
-    font-size: 2.5rem;
+    color: #3b731c;
     font-weight: bold;
-    color: #223a19;
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
   }
 
   .color-naranja {
@@ -28,43 +48,24 @@
   }  
   
   .home-container h2 {
+    color: #3b731c;
     font-weight: bold;
-    font-size: 2rem;
-    color: #171717;
-    margin-bottom: 1.5rem;
+    margin-bottom: 4rem;
   }
   
   /* Párrafo de descripción */
   .Descripcion p {
     font-size: 1.1rem;
-    line-height: 1.8;
-    color: #111827;
+    line-height: 1.7;
+    color: #000000;
     max-width: 900px;
     margin: 0 auto;
+    text-align: justify;
   }
   
   /* Estilo de la sección Redes */
   .Redes {
     text-align: center;
-  }
-  
-  /* Íconos de redes sociales */
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
-  }
-  
-  .social-icons a {
-    font-size: 1.8rem;
-    color: #1f2937;
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  
-  .social-icons a:hover {
-    transform: scale(1.2);
-    color: #1e40af;
   }
   
   /* Responsive */

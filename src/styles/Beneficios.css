@@ -1,47 +1,90 @@
 .beneficios {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
-  }
-  
-  .beneficio-card {
-    border-radius: 1rem;
-    padding: 1.5rem;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .beneficio-card:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Colores personalizados para cada tarjeta */
-  .financiero {
-    background: linear-gradient(135deg, #43cea2, #185a9d);
-  }
-  
-  .bienestar {
-    background: linear-gradient(135deg, #f7971e, #ffd200);
-  }
-  
-  .recreacion {
-    background: linear-gradient(135deg, #56ccf2, #2f80ed);
-  }
-  
-  .educacion {
-    background: linear-gradient(135deg, #ff758c, #ff7eb3);
-  }
-  
+  font-family: "PT Serif", serif;
+  font-weight: 200;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 8px;
+}
+
+h3{
+  font-family: "DM Serif Text", serif;
+  font-weight:600;
+}
+
+.financiero {
+  grid-row: span 3 / span 3;
+  background: linear-gradient(135deg, #3f8324, #223a19);
+}
+
+.recreacion {
+  grid-row: span 3 / span 3;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  background: linear-gradient(135deg, #f69605, #ed9b2f);
+}
+
+.bienestar {
+  grid-row: span 3 / span 3;
+  grid-column-start: 3;
+  grid-row-start: 1;
+  background: linear-gradient(135deg, #223a19, #3f8324);
+}
+
+.educacion {
+  grid-row: span 3 / span 3;
+  grid-column-start: 4;
+  grid-row-start: 2;
+  background: linear-gradient(135deg, #f69605, #ed9b2f);
+}
+
+.beneficio-card {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.beneficio-card:hover {
+  transform: scale(1.05);
+}
+
   .beneficio-card h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
     font-size: 1.3rem;
   }
   
   .beneficio-card p {
-    font-size: 0.95rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 2rem;
   }
+  
+  @media (max-width: 768px) {
+    .beneficios {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .financiero,
+    .recreacion,
+    .bienestar,
+    .educacion {
+      all: unset; /* elimina posiciones de grid, columnas, etc */
+      width: 90%;
+      max-width: 300px;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      color: white;
+      background-color: #185a9d;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
   

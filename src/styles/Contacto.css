@@ -13,17 +13,17 @@
     justify-content: center;
     background-color: white;
     color: #333;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-decoration: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: all 0.3s ease-in-out;
   }
   
   .social-icons a:hover {
-    transform: scale(1.15);
+    transform: scale(1.7);
   }
   
   /* Colores de cada red social */
@@ -31,4 +31,5 @@
   .social-icons a:nth-child(2):hover { color: #FF0000; }  /* YouTube */
   .social-icons a:nth-child(3):hover { color: #1DA1F2; }  /* Twitter */
   .social-icons a:nth-child(4):hover { color: #C13584; }  /* Instagram */
+  .social-icons a:nth-child(5):hover { color: #1ecc0e; }  /* Whatsapp */
   

@@ -1,4 +1,6 @@
 .navbar {
+    font-family: "DM Serif Text", serif;
+    font-weight: 600;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,13 +55,13 @@
   @media (max-width: 768px) {
     .menu-toggle {
       display: block;
-      color: #1a1a1a;
+      color: #ffffff;
     }
   
     .navbar-links {
       display: none;
       flex-direction: column;
-      background-color: white;
+      background-color: #1a1a1a;
       position: absolute;
       top: 100%;
       left: 0;

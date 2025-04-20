@@ -1,9 +1,10 @@
 // src/app/afiliacion/page.tsx
+import "../../styles/Afiliacion.css"
 import SubirDocumento from '../../components/SubirDocumento'
 
 export default function Afiliacion() {
   return (
-    <div className="p-6 space-y-12">
+    <div className="afiliacion-container">
       {/* Requisitos y proceso de afiliación */}
       <section>
         <h1 className="text-3xl font-bold mb-4">Afiliación</h1>

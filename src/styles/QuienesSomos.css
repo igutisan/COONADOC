@@ -1,0 +1,70 @@
+.quienes-somos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: "PT Serif" , serif;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.color-naranja {
+  color: #f69605;
+} 
+
+.seccion {
+  margin-bottom: 3rem;
+}
+
+.seccion h1,
+.seccion h2 {
+  font-family: "DM Serif Text", serif;
+  font-weight: 600;
+  color: #3b731c;
+  margin-bottom: 1rem;
+}
+
+.seccion p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.video-historia {
+  display: block;
+  max-width: 800px;
+  width: 100%;
+  margin: 1.5rem auto 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.493);
+}
+
+.mision-vision {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.mision-vision .bloque {
+  flex: 1 1 45%;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.documentos ul {
+  padding-left: 1.5rem;
+}
+
+.documentos li {
+  margin-bottom: 0.5rem;
+}
+
+.documentos a {
+  text-decoration: none;
+  color: #0056b3;
+}
+
+.documentos a:hover {
+  text-decoration: underline;
+}
