@@ -83,7 +83,7 @@ export default function ContactSection() {
         <div className="w-full lg:w-1/2 px-2">
           <div className="w-full h-96 rounded-lg shadow-lg overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.674193843415!2d-74.0944551!3d4.6215618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9e2e3033fbf9%3A0x12630813be84248e!2sCoonadoc!5e0!3m2!1ses!2sco!4v1713721127967!5m2!1ses!2sco"
+              src="https://www.google.com/maps?q=4.619514240216461,-74.07214210472841&hl=es&z=16&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
