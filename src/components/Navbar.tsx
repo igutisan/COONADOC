@@ -25,7 +25,7 @@ export default function Navbar() {
         <li><Link href="/quienes-somos">Quiénes Somos</Link></li>
         <li><Link href="/afiliacion">Afiliación</Link></li>
         <li><Link href="/formatos">Formatos</Link></li>
-        <li><Link href="/Noticias">Noticias</Link></li>
+        <li><Link href="/noticias">Noticias</Link></li>
         <li><Link href="/contacto">Contacto</Link></li>
       </ul>
     </nav>
