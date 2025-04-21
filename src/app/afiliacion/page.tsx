@@ -1,10 +1,8 @@
-import "../../styles/Afiliacion.css"
-import SubirDocumento from '../../components/SubirDocumento'
-import Link from 'next/link'
-
+import "../../styles/Afiliacion.css";
+import SubirDocumento from '../../components/SubirDocumento';
+import Link from 'next/link';
 
 export default function Afiliacion() {
-
   const formularios = [
     {
       texto: "INSCRIPCIÓN NUEVOS SOCIOS",
@@ -23,20 +21,18 @@ export default function Afiliacion() {
     },
     {
       texto: "INSCRIPCIÓN EN LÍNEA",
-      archivo: "/inscripcion-en-linea", 
+      archivo: "/inscripcion-en-linea",
       externo: false,
     },
     {
       texto: "ACTUALIZACIÓN EN LÍNEA",
-      archivo: "/actualizacion-en-linea", 
+      archivo: "/inscripcion-en-linea",
       externo: false,
     },
   ];
-  
 
   return (
-    
-      <div className="afiliacion-container">
+    <div className="afiliacion-container">
       <h1 className="text-3xl font-bold mb-6 text-center">Afiliación</h1>
       <p className="text-center mb-4">
         Radica tu solicitud enviando el formulario diligenciado al correo:{" "}
@@ -61,17 +57,13 @@ export default function Afiliacion() {
               {formulario.texto}
             </a>
           ) : (
-            <Link href={formulario.archivo} key={index} passHref>
-              <div className="pdf-boton cursor-pointer">
-                {formulario.texto}
-              </div>
+            <Link href={formulario.archivo} key={index}>
+              <span className="pdf-boton">{formulario.texto}</span>
             </Link>
           )
         )}
       </div>
 
-
-      {/* Tipos de crédito */}
       <section>
         <h2 className="text-2xl font-semibold mb-4">Tipos de Crédito</h2>
         <ul className="list-disc pl-6">
@@ -81,7 +73,6 @@ export default function Afiliacion() {
         </ul>
       </section>
 
-      {/* Información sobre seguros y beneficios */}
       <section>
         <h2 className="text-2xl font-semibold mb-4">Seguros y Beneficios</h2>
         <p>
@@ -89,7 +80,6 @@ export default function Afiliacion() {
         </p>
       </section>
 
-      {/* Listado de convenios */}
       <section>
         <h2 className="text-2xl font-semibold mb-4">Convenios</h2>
         <ul className="list-disc pl-6">
@@ -98,11 +88,10 @@ export default function Afiliacion() {
         </ul>
       </section>
 
-      {/* Subida de documentos */}
       <section>
         <h2 className="text-2xl font-semibold mb-4">Subir Documentos para Afiliación</h2>
         <SubirDocumento />
       </section>
     </div>
-  )
+  );
 }

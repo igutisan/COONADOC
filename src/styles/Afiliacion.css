@@ -28,3 +28,16 @@
     background-color: #e68a00;
   }
   
+  .pdf-boton {
+    background-color: #ff9900;
+    color: #003300;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none !important; /* <-- Asegura que no se subraye */
+    transition: background-color 0.3s ease;
+    min-width: 280px;
+    text-align: center;
+    display: inline-block;
+  }
+  
