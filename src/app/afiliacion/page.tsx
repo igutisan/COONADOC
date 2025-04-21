@@ -26,7 +26,7 @@ export default function Afiliacion() {
     },
     {
       texto: "ACTUALIZACIÓN EN LÍNEA",
-      archivo: "/inscripcion-en-linea",
+      archivo: "/inscripcion-en-linea", //Ambos botones redirigien al mismo formulario.
       externo: false,
     },
   ];
