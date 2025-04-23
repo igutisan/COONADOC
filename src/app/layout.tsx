@@ -1,7 +1,7 @@
 import './globals.css'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { AuthProvider } from './context/AuthContext'; // ruta corregida según estructura
+import { AuthProvider } from './context/AuthContext'; 
 
 export const metadata = {
   title: 'COONADOC',

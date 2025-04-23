@@ -1,5 +1,5 @@
 'use client';
-import React, { createContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useState, useEffect, ReactNode } from 'react';
 
 type AuthContextType = {
   autenticado: boolean;
@@ -11,16 +11,12 @@ export const AuthContext = createContext<AuthContextType>({
   setAutenticado: () => {},
 });
 
-type AuthProviderProps = {
-  children: ReactNode;
-};
-
-export const AuthProvider = ({ children }: AuthProviderProps) => {
+export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [autenticado, setAutenticado] = useState(false);
 
   useEffect(() => {
-    const sesion = localStorage.getItem("autenticado");
-    setAutenticado(sesion === "true");
+    const sesion = localStorage.getItem('autenticado');
+    setAutenticado(sesion === 'true');
   }, []);
 
   return (

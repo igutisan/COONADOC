@@ -1,23 +1,28 @@
 "use client";
 
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../context/AuthContext';
 
 export default function LoginPage() {
   const [usuario, setUsuario] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const {setAutenticado} = useContext(AuthContext);
   const router = useRouter();
+  
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-
     // Datos de ejemplo: usuario admin / contraseña admin123
     if (usuario === 'admin' && password === 'admin123') {
       localStorage.setItem('autenticado', 'true');
-      router.push('/noticias');
+      setAutenticado(true);
+      router.push('/');
     } else {
       setError('Credenciales inválidas');
+      setUsuario('');
+      setPassword('');
     }
   };
 
@@ -32,6 +37,7 @@ export default function LoginPage() {
           value={usuario}
           onChange={(e) => setUsuario(e.target.value)}
           className="w-full p-2 border border-gray-300 rounded"
+          required
         />
         <input
           type="password"
@@ -39,6 +45,7 @@ export default function LoginPage() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           className="w-full p-2 border border-gray-300 rounded"
+          required
         />
         <button
           type="submit"
