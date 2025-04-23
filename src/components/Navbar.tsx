@@ -2,12 +2,18 @@
 import Link from "next/link";
 import {useState} from "react";
 import "../styles/Navbar.css";
+import { FaChevronDown } from 'react-icons/fa';
 
 export default function Navbar() {
-  const[menuAbierto, setMenuAbierto] = useState(false);
+  const [menuAbierto, setMenuAbierto] = useState(false);
+  const [noticiasSubmenu, setNoticiasSubmenu] = useState(false);
 
   const toggleMenu = () => {
     setMenuAbierto(!menuAbierto);
+  };
+
+  const toggleNoticiasSubmenu = () => {
+    setNoticiasSubmenu(!noticiasSubmenu);
   };
 
   return (
@@ -25,7 +31,18 @@ export default function Navbar() {
         <li><Link href="/quienes-somos">Quiénes Somos</Link></li>
         <li><Link href="/afiliacion">Afiliación</Link></li>
         <li><Link href="/formatos">Formatos</Link></li>
-        <li><Link href="/noticias">Noticias</Link></li>
+        <li className="submenu-container">
+          <button 
+            onClick={toggleNoticiasSubmenu} 
+            className="submenu-toggle"
+          >
+            Noticias <FaChevronDown className={`submenu-icon ${noticiasSubmenu ? 'rotated' : ''}`} />
+          </button>
+          <ul className={`submenu ${noticiasSubmenu ? 'active' : ''}`}>
+            <li><Link href="/noticias">Crear Noticia</Link></li>
+            <li><Link href="/gestion-noticias">Gestionar Noticias</Link></li>
+          </ul>
+        </li>
         <li><Link href="/contacto">Contacto</Link></li>
       </ul>
     </nav>

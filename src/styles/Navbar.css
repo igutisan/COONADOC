@@ -50,6 +50,80 @@
   .navbar-links li a:hover {
     color: #f18f07;
   }
+
+  /* Submenu styles */
+  .submenu-container {
+    position: relative;
+  }
+  
+  .submenu-toggle {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-family: "DM Serif Text", serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0;
+  }
+  
+  .submenu-toggle:hover {
+    color: #f18f07;
+  }
+  
+  .submenu-icon {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .submenu-icon.rotated {
+    transform: rotate(180deg);
+  }
+  
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submenu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .submenu li {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .submenu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .submenu li a:hover {
+    background-color: #333;
+    color: #f18f07;
+  }
   
   /* Responsive */
   @media (max-width: 768px) {
@@ -72,6 +146,35 @@
   
     .navbar-links.active {
       display: flex;
+    }
+
+    .submenu-container {
+      width: 100%;
+    }
+    
+    .submenu-toggle {
+      width: 100%;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+    }
+    
+    .submenu {
+      position: static;
+      width: 100%;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+      margin-left: 1rem;
+      border: none;
+      box-shadow: none;
+      display: none;
+    }
+    
+    .submenu.active {
+      display: block;
+    }
+    
+    .submenu li a {
+      padding-left: 1.5rem;
     }
   }
   

@@ -1,6 +1,7 @@
 import "../styles/Home.css";
 import Beneficios from '../components/Beneficios'
 import Noticias from '../components/Noticias'
+import NoticiasCarousel from '../components/NoticiasCarousel'
 import Contacto from '../components/Contacto'
 import Carousel from '../components/Carousel'
 
@@ -23,19 +24,24 @@ export default function HomePage() {
           </p>
         </section>
 
-        {/* Beneficios de la cooperativa */}
+     
         <section className="Beneficios">
           <h2>Beneficio<span className="color-naranja">s</span></h2>
           <Beneficios />
         </section>
 
         {/* Noticias o blog */}
-        <section  className="Noticias">
-          <h2>Noticia<span className="color-naranja">s</span></h2>
-          <Noticias />
+        <section className="Noticias">
+          <h2>Noticia<span className="color-naranja">s</span> reciente<span className="color-naranja">s</span></h2>
+          {/* Carrusel de noticias destacadas */}
+          <div className="mb-8">
+            <NoticiasCarousel />
+          </div>
+          
+         
         </section>
 
-        {/* Contacto (WhatsApp y redes sociales) */}
+       
         <section className="Redes">
           <h2>Contáctano<span className="color-naranja">s</span> e<span className="color-naranja">n</span> nuestra<span className="color-naranja">s</span> rede<span className="color-naranja">s</span></h2>
           <Contacto />
