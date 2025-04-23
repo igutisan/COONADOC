@@ -3,6 +3,8 @@ import Link from "next/link";
 import {useState} from "react";
 import "../styles/Navbar.css";
 import { FaChevronDown } from 'react-icons/fa';
+import { MdLogin } from "react-icons/md";
+
 
 export default function Navbar() {
   const [menuAbierto, setMenuAbierto] = useState(false);
@@ -44,6 +46,12 @@ export default function Navbar() {
           </ul>
         </li>
         <li><Link href="/contacto">Contacto</Link></li>
+        <li>
+          <Link href="/login" className="login-icon-link flex items-center space-x-1">
+            <MdLogin size={20} />
+            <span>Iniciar Sesión</span>
+          </Link>
+        </li>
       </ul>
     </nav>
   );

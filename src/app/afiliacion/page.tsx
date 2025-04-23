@@ -1,5 +1,4 @@
 import "../../styles/Afiliacion.css";
-import SubirDocumento from '../../components/SubirDocumento';
 import Link from 'next/link';
 
 export default function Afiliacion() {
@@ -86,11 +85,6 @@ export default function Afiliacion() {
           <li>Convenio con Clínica Vida Sana</li>
           <li>Descuento en Universidad Local</li>
         </ul>
-      </section>
-
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">Subir Documentos para Afiliación</h2>
-        <SubirDocumento />
       </section>
     </div>
   );

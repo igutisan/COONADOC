@@ -33,6 +33,7 @@
   }
   
   .navbar-links {
+    margin-top: 8px;
     list-style: none;
     display: flex;
     gap: 2rem;
@@ -123,6 +124,13 @@
   .submenu li a:hover {
     background-color: #333;
     color: #f18f07;
+  }
+
+  .login-icon-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
   }
   
   /* Responsive */

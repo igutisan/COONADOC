@@ -11,7 +11,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-socials">
-          <a href="/">Términos y condiciones de uso</a>
+          <a href="/">Política Integral</a>
           -
           <a href="/afiliacion">Privacidad de datos personales</a>
         </div>

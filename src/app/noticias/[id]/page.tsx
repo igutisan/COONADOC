@@ -137,7 +137,7 @@ export default function NoticiaDetalle() {
           <div className="p-6 md:p-8 border-b border-gray-100">
             <div className="flex flex-wrap justify-between items-center">
               <div className="flex items-center mb-2 md:mb-0">
-                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white mr-3">
+                <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white mr-3">
                   <span className="font-bold">{noticia.autor ? noticia.autor.charAt(0).toUpperCase() : 'C'}</span>
                 </div>
                 <div>
@@ -176,9 +176,9 @@ export default function NoticiaDetalle() {
             </div>
             
             {/* Bloque de información adicional */}
-            <div className="mt-12 p-6 bg-blue-50 rounded-lg border-l-4 border-blue-500">
-              <h3 className="text-xl font-bold text-blue-800 mb-2">Sobre COONADOC</h3>
-              <p className="text-blue-700">
+            <div className="mt-12 p-6 bg-blue-50 rounded-lg border-l-4 border-green-500">
+              <h3 className="text-xl font-bold text-dark-800 mb-2">Sobre COONADOC</h3>
+              <p className="text-dark-700">
                 Somos una cooperativa de aportes y crédito que cuenta con talento humano idóneo, 
                 entrega servicios integrales de manera socialmente responsable y sostenible.
               </p>
