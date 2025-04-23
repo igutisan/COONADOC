@@ -11,9 +11,9 @@ export default function Footer() {
         </div>
 
         <div className="footer-socials">
-          <a href="/">Política Integral</a>
+          <a href="/pdfs/Politica-Integral.pdf" download>Política Integral Coonadoc</a>
           -
-          <a href="/afiliacion">Privacidad de datos personales</a>
+          <a href="/pdfs/Politica-de-tratamiento-de-datos.pdfs"download>Privacidad de datos personales</a>
         </div>
       </div>
 
