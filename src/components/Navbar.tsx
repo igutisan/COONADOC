@@ -1,14 +1,16 @@
 'use client';
 import Link from "next/link";
-import {useState} from "react";
+import { useState, useContext } from "react";
 import "../styles/Navbar.css";
 import { FaChevronDown } from 'react-icons/fa';
-import { MdLogin } from "react-icons/md";
-
+import { MdLogin, MdLogout } from "react-icons/md";
+import { AuthContext } from "../app/context/AuthContext"; // 👈 importa el contexto
 
 export default function Navbar() {
   const [menuAbierto, setMenuAbierto] = useState(false);
   const [noticiasSubmenu, setNoticiasSubmenu] = useState(false);
+
+  const { autenticado, setAutenticado } = useContext(AuthContext); // 👈 usa el contexto
 
   const toggleMenu = () => {
     setMenuAbierto(!menuAbierto);
@@ -18,10 +20,19 @@ export default function Navbar() {
     setNoticiasSubmenu(!noticiasSubmenu);
   };
 
+  const cerrarSesion = () => {
+    const confirmar = window.confirm("¿Estás seguro que deseas cerrar sesión?");
+    if (confirmar) {
+      localStorage.removeItem("autenticado");
+      setAutenticado(false); // 👈 actualiza el contexto
+      window.location.href = "/";
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-          <img src="/images/image.png" alt="logoCoonadoc" />
+        <img src="/images/image.png" alt="logoCoonadoc" />
       </div>
 
       <button className="menu-toggle" onClick={toggleMenu}>
@@ -33,27 +44,40 @@ export default function Navbar() {
         <li><Link href="/quienes-somos">Quiénes Somos</Link></li>
         <li><Link href="/afiliacion">Afiliación</Link></li>
         <li><Link href="/formatos">Formatos</Link></li>
-        <li className="submenu-container">
-          <button 
-            onClick={toggleNoticiasSubmenu} 
-            className="submenu-toggle"
-          >
-            Noticias <FaChevronDown className={`submenu-icon ${noticiasSubmenu ? 'rotated' : ''}`} />
-          </button>
-          <ul className={`submenu ${noticiasSubmenu ? 'active' : ''}`}>
-            <li><Link href="/noticias">Crear Noticia</Link></li>
-            <li><Link href="/gestion-noticias">Gestionar Noticias</Link></li>
-          </ul>
-        </li>
+
+        {autenticado && (
+          <li className="submenu-container">
+            <button 
+              onClick={toggleNoticiasSubmenu} 
+              className="submenu-toggle"
+            >
+              Noticias <FaChevronDown className={`submenu-icon ${noticiasSubmenu ? 'rotated' : ''}`} />
+            </button>
+            <ul className={`submenu ${noticiasSubmenu ? 'active' : ''}`}>
+              <li><Link href="/noticias">Crear Noticia</Link></li>
+              <li><Link href="/gestion-noticias">Gestionar Noticias</Link></li>
+            </ul>
+          </li>
+        )}
+
         <li><Link href="/contacto">Contacto</Link></li>
-        <li>
-          <Link href="/login" className="login-icon-link flex items-center space-x-1">
-            <MdLogin size={20} />
-            <span>Iniciar Sesión</span>
-          </Link>
-        </li>
+
+        {!autenticado ? (
+          <li>
+            <Link href="/login" className="login-icon-link">
+              <MdLogin size={20} />
+              <span>Iniciar Sesión</span>
+            </Link>
+          </li>
+        ) : (
+          <li>
+            <a onClick={cerrarSesion} className="logout-button">
+              <MdLogout size={20} />
+              <span>Cerrar Sesión</span>
+            </a>
+          </li>
+        )}
       </ul>
     </nav>
   );
 }
-  

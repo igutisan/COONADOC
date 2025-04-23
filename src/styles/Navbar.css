@@ -133,6 +133,18 @@
     transition: color 0.3s ease;
   }
   
+  .logout-button {
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    color: #f18f07;
+  }
+  
   /* Responsive */
   @media (max-width: 768px) {
     .menu-toggle {

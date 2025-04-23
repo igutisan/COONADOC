@@ -1,5 +1,5 @@
 "use client";
-
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaImage, FaLink, FaUpload } from 'react-icons/fa';
@@ -22,6 +22,14 @@ export default function NoticiasPage() {
   const [cargandoImagen, setCargandoImagen] = useState(false);
   const [modoImagen, setModoImagen] = useState<'url' | 'archivo'>('url');
   const router = useRouter();
+
+  //Función para redirig si no esta logeado como admin
+  useEffect(() => {
+    const autenticado = localStorage.getItem('autenticado');
+    if (autenticado !== 'true') {
+      router.push('/login');
+    }
+  }, []);
 
   // Función para convertir archivo a base64
   const convertirArchivoABase64 = (archivo: File): Promise<string> => {

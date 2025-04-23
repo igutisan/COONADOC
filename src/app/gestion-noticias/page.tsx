@@ -97,13 +97,8 @@ export default function GestionNoticias() {
 
   return (
     <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-center items-center mb-6">
         <h1 className="text-3xl font-bold text-gray-800">Gestión de Noticias</h1>
-        <Link href="/noticias">
-          <span className="bg-orange-700 hover:bg-orange-600 text-white px-4 py-2 rounded-lg">
-            Crear Nueva Noticia
-          </span>
-        </Link>
       </div>
 
       {noticias.length === 0 ? (

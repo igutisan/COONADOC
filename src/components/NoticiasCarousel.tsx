@@ -133,10 +133,7 @@ export default function NoticiasCarousel() {
   if (noticias.length === 0) {
     return (
       <div className="bg-gray-100 rounded-lg p-8 text-center">
-        <p className="text-gray-500">No hay noticias disponibles.</p>
-        <Link href="/noticias" className="inline-block mt-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition duration-300">
-          Crear la primera noticia
-        </Link>
+        <p className="text-gray-500">No hay noticias disponibles en este momento...</p>
       </div>
     );
   }
