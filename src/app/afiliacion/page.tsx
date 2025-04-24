@@ -25,23 +25,49 @@ export default function Afiliacion() {
     },
     {
       texto: "ACTUALIZACIÓN EN LÍNEA",
-      archivo: "/inscripcion-en-linea", //Ambos botones redirigien al mismo formulario.
+      archivo: "/inscripcion-en-linea",
       externo: false,
-    },
+    }
   ];
 
   return (
-    <div className="afiliacion-container">
-      <h1 className="text-3xl font-bold mb-6 text-center">Afiliación</h1>
+    <div className="afiliacion-container seccion">
+      <h1>Afiliació<span className="color-naranja">n</span></h1>
+
       <p className="text-center mb-4">
         Radica tu solicitud enviando el formulario diligenciado al correo:{" "}
         <a
           href="mailto:afiliaciones@coonadoc.co"
-          className="text-blue-600 underline"
+          className="correo-enlace"
         >
           afiliaciones@coonadoc.co
         </a>
       </p>
+
+      <section className="seccion">
+      <h2>Tipo<span className="color-naranja">s</span> de Crédit<span className="color-naranja">o</span></h2>
+
+        <ul className="lista">
+          <li>Crédito Educativo</li>
+          <li>Crédito de Vivienda</li>
+          <li>Crédito de Libre Inversión</li>
+        </ul>
+      </section>
+
+      <section id="beneficios" className="seccion">
+        <h2>Seguro<span className="color-naranja">s</span> y Beneficio<span className="color-naranja">s</span></h2>
+        <p className="parrafo">
+          Detalles sobre los seguros que se ofrecen y los beneficios adicionales por estar afiliado.
+        </p>
+      </section>
+
+      <section className="seccion">
+        <h2>Convenio<span className="color-naranja">s</span></h2>
+        <ul className="lista">
+          <li>Convenio con Clínica Vida Sana</li>
+          <li>Descuento en Universidad Local</li>
+        </ul>
+      </section>
 
       <div className="botones-container">
         {formularios.map((formulario, index) =>
@@ -62,30 +88,6 @@ export default function Afiliacion() {
           )
         )}
       </div>
-
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">Tipos de Crédito</h2>
-        <ul className="list-disc pl-6">
-          <li>Crédito Educativo</li>
-          <li>Crédito de Vivienda</li>
-          <li>Crédito de Libre Inversión</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">Seguros y Beneficios</h2>
-        <p>
-          Detalles sobre los seguros que se ofrecen y los beneficios adicionales por estar afiliado.
-        </p>
-      </section>
-
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">Convenios</h2>
-        <ul className="list-disc pl-6">
-          <li>Convenio con Clínica Vida Sana</li>
-          <li>Descuento en Universidad Local</li>
-        </ul>
-      </section>
     </div>
   );
 }
