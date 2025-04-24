@@ -103,7 +103,7 @@ export default function Noticias() {
               {truncarTexto(noticia.contenido)}
             </p>
             
-            <Link href={`/gestion-noticias`} className="inline-block text-blue-500 hover:text-blue-700 font-medium">
+            <Link href={`/noticias/${noticia.id}`} className="inline-block text-orange-500 hover:text-orange-600 font-medium">
               Leer más →
             </Link>
           </div>

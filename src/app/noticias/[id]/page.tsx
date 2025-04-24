@@ -21,14 +21,6 @@ export default function NoticiaDetalle() {
   const router = useRouter();
   const id = params?.id as string;
 
-  //Función para redirigir si no esta logeado como admin
-  useEffect(() => {
-    const autenticado = localStorage.getItem('autenticado');
-    if (autenticado !== 'true') {
-      router.push('/login');
-    }
-  }, []);
-
   useEffect(() => {
     if (!id) {
       setError("ID de noticia no válido");

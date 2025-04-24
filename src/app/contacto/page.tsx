@@ -1,15 +1,16 @@
 "use client";
 
 import { FaPhone, FaEnvelope, FaClock, FaMapMarkerAlt, FaPhoneAlt, FaMobileAlt, FaMoneyBillWave, FaCreditCard } from 'react-icons/fa';
+import ContactForm from '@/components/ContactForm';
 
 export default function ContactSection() {
-  // Color personalizado
+
   const customGreen = "#3b731c";
   
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#f0f5ec]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Encabezado */}
+       
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             <span className="text-[#3b731c]">Contáctanos</span>
@@ -19,8 +20,9 @@ export default function ContactSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Columna de información de contacto */}
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+         
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="bg-[#3b731c] text-white p-6">
               <h2 className="text-2xl font-bold">Información de contacto</h2>
@@ -30,7 +32,7 @@ export default function ContactSection() {
             </div>
             
             <div className="p-6">
-              {/* Teléfonos */}
+              
               <div className="mb-8">
                 <h3 className="text-xl font-semibold mb-4 text-gray-800 flex items-center">
                   <FaPhone className="text-orange-500 mr-2" /> Números telefónicos
@@ -210,6 +212,11 @@ export default function ContactSection() {
               </div>
             </div>
           </div>
+        </div>
+        
+        {/* Formulario de contacto - ocupa todo el ancho */}
+        <div className="max-w-3xl mx-auto">
+          <ContactForm />
         </div>
       </div>
     </section>
